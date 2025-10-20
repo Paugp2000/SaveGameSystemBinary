@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
 
 
     private bool isGrounded;
-
+    int coins = 0;
     [Header("Input")]
     [SerializeField] InputAction movementAction;
 
@@ -40,11 +40,19 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = new Vector3(horizontalVelocity.x, 0, horizontalVelocity.y);
+        rb.velocity = new Vector3(horizontalVelocity.x, rb.velocity.y, horizontalVelocity.y);
     }
 
     void OnMovement(InputAction.CallbackContext ctx)
     {
         horizontalVelocity = ctx.ReadValue<Vector2>() * horizontalMovementSpeed;
+    }
+    public void PickUpCoin()
+    {
+        coins++;
+    }
+    public int GetCoins()
+    {
+        return coins;   
     }
 }
