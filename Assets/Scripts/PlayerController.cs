@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("References")]
     private Rigidbody rb;
+    public GameObject player;
 
 
     private bool isGrounded;
