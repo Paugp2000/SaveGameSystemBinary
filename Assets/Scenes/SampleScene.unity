@@ -1432,6 +1432,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &936926537 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
+  m_PrefabInstance: {fileID: 1035997230833099200}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014b78a98402d144d8f54b111dcea57f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1688,6 +1699,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b0e35139b24af4298244514713783b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 356409471}
+  coin: {fileID: 936926537}
 --- !u!114 &1085683439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1700,7 +1713,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49397f76b626f8f4fb51804ad1d874e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  save: {fileID: 0}
+  save: {fileID: 1085683438}
+  playerController: {fileID: 356409471}
+  coinController: {fileID: 936926537}
 --- !u!4 &1085683440
 Transform:
   m_ObjectHideFlags: 0
