@@ -8,6 +8,9 @@ public class SaveSystemController : MonoBehaviour
 {
     public static PlayerController player;
     public static CoinController coin;
+    public static SaveSystemController instance;
+    public static SaveGameClass saved;
+    protected List<float[]> positioncoinLoad = new List<float[]>();
     void Awake()
     {
         Directory.CreateDirectory(Application.persistentDataPath + "/SavedData");
@@ -37,12 +40,36 @@ public class SaveSystemController : MonoBehaviour
             return null;
         }
     }
+    public void LoadInGameSave()
+    {
+        loadSavedSystem().position[0] = player.GetComponent<GameObject>().transform.position.x;
+        loadSavedSystem().position[1] = player.GetComponent<GameObject>().transform.position.y;
+        loadSavedSystem().position[2] = player.GetComponent<GameObject>().transform.position.z;
+        loadSavedSystem().positionCoin = positioncoinLoad;
+        for (int i = 0; i < loadSavedSystem().coinsNumber; i++) {
+                positioncoinLoad[i][0] = coin.GetComponent<GameObject>().GetComponentAtIndex(i).transform.position.x;
+                positioncoinLoad[i][1] = coin.GetComponent<GameObject>().GetComponentAtIndex(i).transform.position.y;
+                positioncoinLoad[i][2] = coin.GetComponent<GameObject>().GetComponentAtIndex(i).transform.position.z;
+        }
+        for (int i = 0; i < loadSavedSystem().coinsNumber; i++)
+        {
+                if (loadSavedSystem().setActiveCoin[i] == true)
+            {
+                coin.GetComponent<GameObject>().GetComponentAtIndex(i).gameObject.SetActive(true);
+            }
+            else
+            {
+                coin.GetComponent<GameObject>().GetComponentAtIndex(i).gameObject.SetActive(false);
+            }
+        }
+
+    }
     public class SaveGameClass
     {
         public float[] position;
-        List<float[]> positionCoin;
-        List<bool> setActiveCoin;
-        int coinsNumber = 7;
+        public List<float[]> positionCoin;
+        public int coinsNumber = 7;
+        public List<bool> setActiveCoin;
 
         public SaveGameClass(PlayerController player, CoinController coin)
         {
