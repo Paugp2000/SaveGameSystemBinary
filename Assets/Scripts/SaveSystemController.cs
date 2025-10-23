@@ -6,23 +6,25 @@ using UnityEngine;
 
 public class SaveSystemController : MonoBehaviour
 {
-    public static PlayerController player;
-    public static CoinController coin;
+    public PlayerController player;
+    public CoinController coin;
     public static SaveSystemController instance;
     public static SaveGameClass saved;
     protected List<float[]> positioncoinLoad = new List<float[]>();
     void Awake()
     {
         Directory.CreateDirectory(Application.persistentDataPath + "/SavedData");
-        player = GetComponent<PlayerController>();
-        coin = GetComponent<CoinController>();  
+        player = PlayerController.instance;
+        coin = CoinController.instance;
     }
-    public void saveSystemBinary(SaveGameClass saveData)
+    
+    public void saveSystemBinary(SaveGameClass data)
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/SavedData/game.dat";
         FileStream stream = new FileStream(path, FileMode.Create);
-        SaveGameClass saveGame = new SaveGameClass(player, coin); 
+        saved = new SaveGameClass(player, coin);
+        SaveGameClass saveGame = saved;
         formatter.Serialize(stream, saveGame);
         stream.Close();
     }
@@ -84,6 +86,10 @@ public class SaveSystemController : MonoBehaviour
             {
                 setActiveCoin[i] = coin.GetComponent<GameObject>() != null;
             }
+        }
+        public void saveThis()
+        {
+            instance.saveSystemBinary(this);
         }
     }
     

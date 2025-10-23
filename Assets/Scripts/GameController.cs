@@ -7,15 +7,11 @@ public class GameController : MonoBehaviour
 {
     public SaveSystemController save;
     public SaveGameClass saveGame;
-    private void Awake()
-    {
-        player = GetComponent<PlayerController>();
-        coin = GetComponent<CoinController>();
-        saveGame = new SaveGameClass(player, coin);
-    }
+    public PlayerController playerController;
+    public CoinController coinController;
     public void GuardarPartida()
     {
-        save.saveSystemBinary(saveGame);
+        saveGame.saveThis();
     }
     public void CargarPartida()
     {

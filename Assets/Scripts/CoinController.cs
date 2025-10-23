@@ -5,6 +5,7 @@ using UnityEngine;
 public class CoinController : MonoBehaviour
 {
     PlayerController playerController;
+    public static CoinController instance;  
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("Player")==true){

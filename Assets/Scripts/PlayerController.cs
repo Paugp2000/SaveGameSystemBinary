@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject player;
 
 
-    private bool isGrounded;
+    public static PlayerController instance;
     int coins = 0;
     [Header("Input")]
     [SerializeField] InputAction movementAction;
