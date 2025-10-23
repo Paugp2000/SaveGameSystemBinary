@@ -14,6 +14,8 @@ public class SaveSystemController : MonoBehaviour
     void Awake()
     {
         Directory.CreateDirectory(Application.persistentDataPath + "/SavedData");
+        player = GetComponent<PlayerController>();
+        coin = GetComponent<CoinController>();  
     }
     public void saveSystemBinary(SaveGameClass saveData)
     {

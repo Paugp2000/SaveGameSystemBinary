@@ -9,7 +9,7 @@ public class CoinController : MonoBehaviour
     {
         if (collider.CompareTag("Player")==true){
             playerController = collider.GetComponent<PlayerController>();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
             playerController.PickUpCoin();
         }
     }
