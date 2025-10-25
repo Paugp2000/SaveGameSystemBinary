@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
     public CoinController coinController;
     public void GuardarPartida()
     {
-        saveGame.saveThis();
+        save.saveSystemBinary(saveGame);
     }
     public void CargarPartida()
     {

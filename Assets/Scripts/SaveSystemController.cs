@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -11,6 +12,8 @@ public class SaveSystemController : MonoBehaviour
     public static SaveSystemController instance;
     public static SaveGameClass saved;
     protected List<float[]> positioncoinLoad = new List<float[]>();
+    public List<float[]> positionCoin = new List<float[]>();
+    public List<bool> setActiveCoin = new List<bool>();
     void Awake()
     {
         Directory.CreateDirectory(Application.persistentDataPath + "/SavedData");
@@ -46,28 +49,29 @@ public class SaveSystemController : MonoBehaviour
     }
     public void LoadInGameSave()
     {
-        loadSavedSystem().position[0] = player.GetComponent<GameObject>().transform.position.x;
-        loadSavedSystem().position[1] = player.GetComponent<GameObject>().transform.position.y;
-        loadSavedSystem().position[2] = player.GetComponent<GameObject>().transform.position.z;
+        loadSavedSystem().position[0] = player.transform.position.x;
+        loadSavedSystem().position[1] = player.transform.position.y;
+        loadSavedSystem().position[2] = player.transform.position.z;
         loadSavedSystem().positionCoin = positioncoinLoad;
         for (int i = 0; i < loadSavedSystem().coinsNumber; i++) {
-                positioncoinLoad[i][0] = coin.GetComponent<GameObject>().GetComponentAtIndex(i).transform.position.x;
-                positioncoinLoad[i][1] = coin.GetComponent<GameObject>().GetComponentAtIndex(i).transform.position.y;
-                positioncoinLoad[i][2] = coin.GetComponent<GameObject>().GetComponentAtIndex(i).transform.position.z;
+                positioncoinLoad[i][0] = coin.coins[i].transform.position.x;
+                positioncoinLoad[i][1] = coin.coins[i].transform.position.y;
+                positioncoinLoad[i][2] = coin.coins[i].transform.position.z;
         }
         for (int i = 0; i < loadSavedSystem().coinsNumber; i++)
         {
                 if (loadSavedSystem().setActiveCoin[i] == true)
             {
-                coin.GetComponent<GameObject>().GetComponentAtIndex(i).gameObject.SetActive(true);
+                coin.coins[i].SetActive(true);
             }
             else
             {
-                coin.GetComponent<GameObject>().GetComponentAtIndex(i).gameObject.SetActive(false);
+                coin.coins[i].SetActive(false);
             }
         }
 
     }
+    [Serializable]
     public class SaveGameClass
     {
         public float[] position;
@@ -76,20 +80,30 @@ public class SaveSystemController : MonoBehaviour
         public List<bool> setActiveCoin;
 
         public SaveGameClass(PlayerController player, CoinController coin)
-        {
-            position = new float[] { player.GetComponent<GameObject>().transform.position.x, player.GetComponent<GameObject>().transform.position.y, player.GetComponent<GameObject>().transform.position.z };
+        { 
+            position = new float[] { player.transform.position.x, player.transform.position.y, player.transform.position.z };
+            positionCoin = new List<float[]>();
+            setActiveCoin = new List<bool>();
             for (int i = 0; i < coinsNumber; i++)
             {
-                positionCoin[i] = new float[] { coin.GetComponent<GameObject>().GetComponentAtIndex(i).transform.position.x, coin.GetComponent<GameObject>().GetComponentAtIndex(i).transform.position.y, coin.GetComponent<GameObject>().GetComponentAtIndex(i).transform.position.z };
+                GameObject coinObj = coin.coins[i]; // Asegúrate de tener esta lista en CoinController
+
+                positionCoin.Add(new float[] {
+            coinObj.transform.position.x,
+            coinObj.transform.position.y,
+            coinObj.transform.position.z
+        });
+
+                setActiveCoin.Add(coinObj.activeSelf);
             }
-            for (int i = 0; i < coinsNumber; i++)
+            if (player != null && coin != null)
             {
-                setActiveCoin[i] = coin.GetComponent<GameObject>() != null;
+               new SaveGameClass(player, coin);
             }
-        }
-        public void saveThis()
-        {
-            instance.saveSystemBinary(this);
+            else
+            {
+                Debug.LogError("Player o CoinController no están inicializados");
+            }
         }
     }
     
