@@ -545,34 +545,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[0]
-      value: 
-      objectReference: {fileID: 1624644936}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[1]
-      value: 
-      objectReference: {fileID: 2022632033}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[2]
-      value: 
-      objectReference: {fileID: 1479724854}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[3]
-      value: 
-      objectReference: {fileID: 825346947}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[4]
-      value: 
-      objectReference: {fileID: 419444736}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[6]
-      value: 
-      objectReference: {fileID: 619290731}
     - target: {fileID: 9011357522536148460, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45.315453
@@ -1071,11 +1043,6 @@ MonoBehaviour:
     m_Flags: 0
   horizontalMovementSpeed: 20
   forwardMovementSpeed: 20
---- !u!1 &419444736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2699165941403159966, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-  m_PrefabInstance: {fileID: 1200275043}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &599323368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1088,34 +1055,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[0]
-      value: 
-      objectReference: {fileID: 1624644936}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[2]
-      value: 
-      objectReference: {fileID: 1479724854}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[3]
-      value: 
-      objectReference: {fileID: 825346947}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[4]
-      value: 
-      objectReference: {fileID: 419444736}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[5]
-      value: 
-      objectReference: {fileID: 2110499555}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[6]
-      value: 
-      objectReference: {fileID: 619290731}
     - target: {fileID: 9011357522536148460, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 57.85763
@@ -1161,11 +1100,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
---- !u!1 &619290731 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2699165941403159966, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-  m_PrefabInstance: {fileID: 1700736801}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &650268280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,11 +1432,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &825346947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2699165941403159966, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-  m_PrefabInstance: {fileID: 1726900267}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &827533658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1514,10 +1443,6 @@ PrefabInstance:
     - target: {fileID: 2699165941403159966, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
       propertyPath: m_Name
       value: Coin
-      objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9011357522536148460, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1820,8 +1745,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b0e35139b24af4298244514713783b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 356409471}
-  coin: {fileID: 0}
+  player:
+    positionX: 0
+    positionY: 0
+    positionZ: 0
+  coin:
+    coins: []
+    coinActive: 
   setActiveCoin: 
 --- !u!114 &1085683439
 MonoBehaviour:
@@ -1836,12 +1766,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   save: {fileID: 1085683438}
-  saveGame:
-    position: []
-    coinsNumber: 0
-    setActiveCoin: 
   playerController: {fileID: 356409471}
-  coinController: {fileID: 0}
+  coinController: {fileID: 1446187621}
 --- !u!4 &1085683440
 Transform:
   m_ObjectHideFlags: 0
@@ -1869,34 +1795,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[0]
-      value: 
-      objectReference: {fileID: 1624644936}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[1]
-      value: 
-      objectReference: {fileID: 2022632033}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[2]
-      value: 
-      objectReference: {fileID: 1479724854}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[3]
-      value: 
-      objectReference: {fileID: 825346947}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[5]
-      value: 
-      objectReference: {fileID: 2110499555}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[6]
-      value: 
-      objectReference: {fileID: 619290731}
     - target: {fileID: 9011357522536148460, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.535576
@@ -1942,16 +1840,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
---- !u!1 &1479724854 stripped
+--- !u!1 &1446187620
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 2699165941403159966, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-  m_PrefabInstance: {fileID: 2060740080}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1624644936 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2699165941403159966, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-  m_PrefabInstance: {fileID: 827533658}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1446187622}
+  - component: {fileID: 1446187621}
+  m_Layer: 0
+  m_Name: CoinController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1446187621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446187620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014b78a98402d144d8f54b111dcea57f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coins: []
+--- !u!4 &1446187622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446187620}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1700736801
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1964,34 +1897,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[0]
-      value: 
-      objectReference: {fileID: 1624644936}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[1]
-      value: 
-      objectReference: {fileID: 2022632033}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[2]
-      value: 
-      objectReference: {fileID: 1479724854}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[3]
-      value: 
-      objectReference: {fileID: 825346947}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[4]
-      value: 
-      objectReference: {fileID: 419444736}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[5]
-      value: 
-      objectReference: {fileID: 2110499555}
     - target: {fileID: 9011357522536148460, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
       propertyPath: m_LocalPosition.x
       value: -55.36251
@@ -2049,34 +1954,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[0]
-      value: 
-      objectReference: {fileID: 1624644936}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[1]
-      value: 
-      objectReference: {fileID: 2022632033}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[2]
-      value: 
-      objectReference: {fileID: 1479724854}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[4]
-      value: 
-      objectReference: {fileID: 419444736}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[5]
-      value: 
-      objectReference: {fileID: 2110499555}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.data[6]
-      value: 
-      objectReference: {fileID: 619290731}
     - target: {fileID: 9011357522536148460, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.738678
@@ -2466,11 +2343,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893209289}
   m_CullTransparentMesh: 1
---- !u!1 &2022632033 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2699165941403159966, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-  m_PrefabInstance: {fileID: 599323368}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2060740080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2482,10 +2354,6 @@ PrefabInstance:
     - target: {fileID: 2699165941403159966, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
       propertyPath: m_Name
       value: Coin (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7841277221023689166, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-      propertyPath: coins.Array.size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9011357522536148460, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2666,11 +2534,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100529673}
   m_CullTransparentMesh: 1
---- !u!1 &2110499555 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2699165941403159966, guid: a8aa07bc20867b344a5a7a34fc259bed, type: 3}
-  m_PrefabInstance: {fileID: 261805551}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2693,3 +2556,4 @@ SceneRoots:
   - {fileID: 1200275043}
   - {fileID: 261805551}
   - {fileID: 1700736801}
+  - {fileID: 1446187622}

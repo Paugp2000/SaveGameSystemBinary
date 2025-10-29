@@ -54,6 +54,6 @@ public class PlayerController : MonoBehaviour
     }
     public int GetCoins()
     {
-        return coins;   
+        return coins;
     }
 }
