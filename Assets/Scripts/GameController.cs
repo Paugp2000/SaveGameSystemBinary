@@ -15,7 +15,6 @@ public class GameController : MonoBehaviour
     }
     public void CargarPartida()
     {
-        saveGame = save.loadSavedSystem();
-        save.LoadInGameSave();
+        playerController.changePosition();
     }
 }

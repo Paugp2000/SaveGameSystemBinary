@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-
+using System;
+[System.Serializable]
 public class SaveGameClass
 {
     public float[] position;
@@ -11,18 +13,19 @@ public class SaveGameClass
     public int dimension = 3;
     public PlayerController controller;
     public CoinController coinController;
+
     
-    public SaveGameClass(PlayerData player, CoinData coin)
+    public SaveGameClass(PlayerData player)
     {
-        player = new PlayerData(controller);
-        coin = new CoinData(coinController);
+
+        //coin = new CoinData(coinController);
         position = new float[] { player.positionX, player.positionY, player.positionZ };
-        positionCoin = new List<float[]>();
+        /*positionCoin = new List<float[]>();
         setActiveCoin = new List<bool>();
         for (int i = 0; i < coinsNumber; i++)
         {
             positionCoin.Add(coin.coinPosition[i]);
             setActiveCoin.Add(coin.coinActive[i]);
-        }
+        }*/
     }
 }

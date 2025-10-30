@@ -24,9 +24,8 @@ public class SaveSystemController : MonoBehaviour
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/SavedData/game.dat";
         FileStream stream = new FileStream(path, FileMode.Create);
-        saved = new SaveGameClass(player, coin);
-        SaveGameClass saveGame = saved;
-        formatter.Serialize(stream, saveGame);
+        saved = new SaveGameClass(player);
+        formatter.Serialize(stream, saved);
         stream.Close();
     }
     public SaveGameClass loadSavedSystem()
@@ -44,29 +43,5 @@ public class SaveSystemController : MonoBehaviour
         {
             return null;
         }
-    }
-    public void LoadInGameSave()
-    {
-        loadSavedSystem().position[0] = player.positionX;
-        loadSavedSystem().position[1] = player.positionY;
-        loadSavedSystem().position[2] = player.positionZ;
-        loadSavedSystem().positionCoin = positioncoinLoad;
-        for (int i = 0; i < loadSavedSystem().coinsNumber; i++) {
-                positioncoinLoad[i][0] = coin.coins[i].transform.position.x;
-                positioncoinLoad[i][1] = coin.coins[i].transform.position.y;
-                positioncoinLoad[i][2] = coin.coins[i].transform.position.z;
-        }
-        for (int i = 0; i < loadSavedSystem().coinsNumber; i++)
-        {
-                if (loadSavedSystem().setActiveCoin[i] == true)
-            {
-                coin.coins[i].SetActive(true);
-            }
-            else
-            {
-                coin.coins[i].SetActive(false);
-            }
-        }
-
     }
 }
