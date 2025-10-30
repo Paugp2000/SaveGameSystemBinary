@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
-[System.Serializable]
+
 public class PlayerController : MonoBehaviour
 {
     [Header("References")]
@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public GameObject player;
     public Button load;
     public SaveGameClass saveGame;
+    public SaveSystemController saveSystem;
 
     public static PlayerController instance;
     int coins = 0;
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
     }
     public void changePosition()
     {
+        saveGame = saveSystem.loadSavedSystem();
         positionX = saveGame.position[0];
         positionY = saveGame.position[1];
         positionZ = saveGame.position[2];

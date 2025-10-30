@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static SaveSystemController;
+
 
 public class GameController : MonoBehaviour
 {
@@ -16,5 +16,6 @@ public class GameController : MonoBehaviour
     public void CargarPartida()
     {
         playerController.changePosition();
+        coinController.activeCoins();
     }
 }

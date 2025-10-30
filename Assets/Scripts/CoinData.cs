@@ -4,31 +4,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class CoinData 
+public class CoinData
 {
     public List<float[]> coinPosition;
     public List<GameObject> coins;
     public List<bool> coinActive;
-    const int coinNum = 7;
-    public CoinData (CoinController controller)
+
+    public CoinData(CoinController controller)
     {
-        for (int i = 0; i < coinNum; i++)
+        coins = new List<GameObject>();
+        coinActive = new List<bool>();
+        for (int i = 0; i < controller.coins.Count; i++)
         {
             coins.Add(controller.coins[i]);
         }
-        for (int i = 0; i < coinNum; i++)
+        for (int j = 0; j < controller.coins.Count; j++)
         {
-            coinPosition[i] = new float[] {
-            coins[i].transform.position.x,
-            coins[i].transform.position.y,
-            coins[i].transform.position.z };
-            if (coins[i].activeInHierarchy == true)
+            if (coins[j].activeInHierarchy == true)
             {
-                coinActive[i] = true;   
+                coinActive.Add(true);
             }
             else
             {
-                coinActive[i] = false;
+                coinActive.Add(false);
             }
         }
     }

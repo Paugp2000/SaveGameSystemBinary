@@ -7,13 +7,11 @@ using UnityEngine;
 
 public class SaveSystemController : MonoBehaviour
 {
-    public PlayerData player;
-    public CoinData coin;
+    [SerializeField] PlayerController playerController;
+    [SerializeField] CoinController coinController;
     public static SaveSystemController instance;
     public static SaveGameClass saved;
-    protected List<float[]> positioncoinLoad = new List<float[]>();
-    public List<float[]> positionCoin = new List<float[]>();
-    public List<bool> setActiveCoin = new List<bool>();
+    
     void Awake()
     {
         Directory.CreateDirectory(Application.persistentDataPath + "/SavedData");
@@ -24,7 +22,8 @@ public class SaveSystemController : MonoBehaviour
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/SavedData/game.dat";
         FileStream stream = new FileStream(path, FileMode.Create);
-        saved = new SaveGameClass(player);
+        saved = new SaveGameClass(new PlayerData(playerController), new CoinData(coinController));
+        
         formatter.Serialize(stream, saved);
         stream.Close();
     }

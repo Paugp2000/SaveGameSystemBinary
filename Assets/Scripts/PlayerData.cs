@@ -2,19 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [Serializable]
-
 public class PlayerData 
 {
-    public float positionX, positionY, positionZ;
+    public float[] position = new float[3]; 
+   
     public PlayerData (PlayerController player)
     {
-        positionX = player.positionX;
-        Debug.Log(positionX);
-        positionY = player.positionY;
-        Debug.Log(positionY);
-        positionZ = player.positionZ;
-        Debug.Log(positionZ);
+        position[0] = player.positionX;
+       
+        position[1] = player.positionY;
+        
+        position[2] = player.positionZ;
+        
     }
 }
