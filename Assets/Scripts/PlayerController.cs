@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     public Button load;
     public SaveGameClass saveGame;
     public SaveSystemController saveSystem;
+    public CoinController coinController;   
 
     public static PlayerController instance;
     int coins = 0;
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
     public void PickUpCoin()
     {
         coins++;
+        coinController.playerCoins++;
     }
     public int GetCoins()
     {

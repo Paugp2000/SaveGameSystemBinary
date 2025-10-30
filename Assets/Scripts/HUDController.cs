@@ -7,9 +7,10 @@ public class HUDController : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI contadorMonedas;
     [SerializeField] PlayerController playerController;
+    [SerializeField] CoinController coinController;
 
     private void Update()
     {
-        contadorMonedas.text = playerController.GetCoins().ToString();
+        contadorMonedas.text = coinController.playerCoins.ToString();
     }
 }
