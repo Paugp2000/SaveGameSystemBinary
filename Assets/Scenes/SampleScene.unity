@@ -740,6 +740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contadorMonedas: {fileID: 1893209291}
   playerController: {fileID: 356409471}
+  coinController: {fileID: 1446187621}
 --- !u!1 &330250169
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +993,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 356409465}
+  saveGame:
+    position: []
+    coinActiveSaved: 
+  saveSystem: {fileID: 1085683438}
+  coinController: {fileID: 1446187621}
   movementAction:
     m_Name: Movement
     m_Type: 0
@@ -1043,6 +1049,9 @@ MonoBehaviour:
     m_Flags: 0
   horizontalMovementSpeed: 20
   forwardMovementSpeed: 20
+  positionX: 0
+  positionY: 0
+  positionZ: 0
 --- !u!1001 &599323368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1745,14 +1754,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b0e35139b24af4298244514713783b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player:
-    positionX: 0
-    positionY: 0
-    positionZ: 0
-  coin:
-    coins: []
-    coinActive: 
-  setActiveCoin: 
+  playerController: {fileID: 356409471}
+  coinController: {fileID: 1446187621}
 --- !u!114 &1085683439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1766,6 +1769,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   save: {fileID: 1085683438}
+  saveGame:
+    position: []
+    coinActiveSaved: 
   playerController: {fileID: 356409471}
   coinController: {fileID: 1446187621}
 --- !u!4 &1085683440
@@ -1870,6 +1876,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: []
+  saveSystem: {fileID: 1085683438}
+  playerCoins: 7
 --- !u!4 &1446187622
 Transform:
   m_ObjectHideFlags: 0
